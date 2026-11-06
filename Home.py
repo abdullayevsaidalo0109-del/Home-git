@@ -64,4 +64,21 @@
 # ]
 
 # print(sorted_by_price(products))
+
+
+# 5
+
+def are_numbers_asending(text:str)->bool:
+    new =[]
+    for i in text.split():
+        if i.isdigit():
+            new.append(int(i))
+        
+    for x in range(1, len(new)):
+        if new[x]<=new[x-1]:
+            return False
+    return True
+        
+text="1 qutida 5 ta yashil, 9 ta qizil, 12 ta sariq to’p bor edi"
+print(are_numbers_asending(text))
          
